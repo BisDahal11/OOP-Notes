@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOP </title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px;
+      background: #f4f6f8;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .toc {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .toc h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .toc li {
+      margin: 10px 0;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    .question {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .question h2 {
+      color: #2c3e50;
+      font-size: 22px;
+    }
+    .question p, .question ul {
+      font-size: 17px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+caption {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eef3fc;
+  transition: background-color 0.3s ease;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Object-Oriented Programming </h1>
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#q1">1. What is OOP? Describe its features.</a></li>
+      <li><a href="#q2">2. What are the advantages and disadvantages of using OOP?</a></li>
+      <li><a href="#q3">3. Explain the term polymorphism and inheritance.</a></li>
+      <li><a href="#q4">4. Differentiate between OOP and Structured Programming.</a></li>
+      <li><a href="#q5">5. Explain class, object, and encapsulation.</a></li>
+	<li><a href="#q6">6. Extra questions to practice.</a></li>
+
+    </ul>
+  </div>
+
+  <div class="question" id="q1">
+    <h2>1. What is OOP? Describe its features.</h2>
+    <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often called attributes or properties), and code in the form of procedures (often called methods). In OOP, programs are designed using objects that interact with one another. This approach models real-world entities more naturally than procedural programming.</p>
+    <p>Key features of OOP include:</p>
+    <ul>
+      <li><strong>Encapsulation:</strong> Wrapping data and code into a single unit called a class. This protects data from unauthorized access.</li>
+      <li><strong>Abstraction:</strong> Hiding complex implementation details and showing only essential features to the user.</li>
+      <li><strong>Inheritance:</strong> Allowing a new class to inherit properties and behavior of an existing class.</li>
+      <li><strong>Polymorphism:</strong> Allowing methods to behave differently based on the object that is calling them, increasing flexibility.</li>
+      <li><strong>Modularity:</strong> Dividing programs into small parts (objects), simplifying development and testing.</li>
+    </ul>
+    <p>Languages like C++, Java, and Python use OOP for better code organization, development, and maintenance.</p>
+  </div>
+
+  <div class="question" id="q2">
+    <h2>2. What are the advantages and disadvantages of using OOP?</h2>
+    <p>Object-Oriented Programming (OOP) offers a structured and reusable way of programming. It helps manage complexity in large software systems and improves code organization through encapsulation and modularity.</p>
+    <p><strong>Advantages:</strong></p>
+    <ul>
+      <li><strong>Modularity:</strong> Classes can be developed and maintained independently.</li>
+      <li><strong>Reusability:</strong> Inheritance allows code reuse without rewriting.</li>
+      <li><strong>Maintainability:</strong> OOP promotes easier updates and bug fixing.</li>
+      <li><strong>Data Security:</strong> Data hiding ensures only authorized methods can access specific data.</li>
+      <li><strong>Scalability:</strong> Objects can be extended and reused for larger systems.</li>
+    </ul>
+    <p><strong>Disadvantages:</strong></p>
+    <ul>
+      <li><strong>Complexity:</strong> OOP may be too complex for simple tasks or small scripts.</li>
+      <li><strong>Performance:</strong> Overheads like dynamic dispatch might slow down execution compared to procedural code.</li>
+      <li><strong>Learning Curve:</strong> Understanding concepts like inheritance and polymorphism takes time.</li>
+    </ul>
+    <p>Despite some challenges, OOP is widely preferred for building maintainable and scalable applications.</p>
+  </div>
+
+  <div class="question" id="q3">
+    <h2>3. Explain the term polymorphism and inheritance.</h2>
+    <p><strong>Polymorphism</strong> and <strong>inheritance</strong> are two fundamental concepts of Object-Oriented Programming that help make software more modular, flexible, and reusable.</p>
+    <p><strong>Polymorphism</strong> is the ability of a single function, operator, or object to behave in different ways in different contexts. It allows the same interface to represent different underlying data types. There are two types of polymorphism: compile-time (method overloading) and run-time (method overriding). This makes the program more flexible and extensible.</p>
+    <p>For example, in C++, we can define multiple functions with the same name but different parameters (overloading). We can also override methods in derived classes to change behavior (overriding).</p>
+    <p><strong>Inheritance</strong> allows a new class (derived or child class) to acquire the properties and behaviors of an existing class (base or parent class). It promotes code reusability and helps in organizing code logically. It also supports hierarchical classifications, where general properties are defined in base classes and specific properties in derived ones.</p>
+    <p>For example, a class <code>Animal</code> may have a method <code>makeSound()</code>, and the class <code>Dog</code> can inherit from <code>Animal</code> and override the method to produce a bark.</p>
+  </div>
+
+  <div class="question" id="q4">
+    <h2>4. Differentiate between OOP and Structured Programming.</h2>
+   <p><strong>Structured Programming</strong> (also called Procedural Programming) and <strong>Object-Oriented Programming</strong> (OOP) are two different paradigms used to build software, each with its own design philosophy.</p>
+    <p>Structured Programming emphasizes functions and procedures. Programs are divided into procedures or functions and follow a top-down design approach. Data is passed between functions and usually has a global scope. Examples include languages like C, FORTRAN, and Pascal.</p>
+    <p>OOP, on the other hand, focuses on objects that combine both data and behavior. Programs are built from classes and objects that encapsulate data. OOP uses a bottom-up approach and emphasizes features such as encapsulation, inheritance, and polymorphism. Languages include C++, Java, and Python.</p>
+    <p><strong>Key Differences:</strong></p>
+    <ul>
+      <li><strong>Data Security:</strong> OOP supports data hiding via encapsulation, while structured programming usually exposes data.</li>
+      <li><strong>Reusability:</strong> OOP promotes reuse through inheritance; structured programming lacks this feature.</li>
+      <li><strong>Modelling:</strong> OOP models real-world entities more naturally than structured programming.</li>
+    </ul>
+    <p>In summary, OOP is preferred for large and complex projects requiring flexibility, while structured programming is suitable for simpler, smaller applications.</p>
+  </div>
+
+
+  <div class="question" id="q5">
+    <h2>5. Explain class, object, and encapsulation.</h2>
+    <p>A <strong>class</strong> is a blueprint that defines the properties and behaviors of objects. It contains data members (attributes) and methods (functions) that work on the data. For example, a <code>Car</code> class might include attributes like <code>color</code> and <code>model</code>, and methods like <code>drive()</code> and <code>brake()</code>.</p>
+    <p>An <strong>object</strong> is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Each object has its own values for the attributes defined in the class.</p>
+    <p><strong>Encapsulation</strong> means binding the data and the methods that modify the data together in a single unit. It also restricts direct access to some of the object's components. This is done by making attributes private and providing public methods to access them (getters and setters). It enhances data security and helps maintain a clean structure in programming.</p>
+    <p>Together, these concepts form the backbone of OOP and help in writing secure, maintainable, and reusable code.</p>
+  </div>
+
+<div class="question" id="q6">
+<h1> Extra Questions to practice </h1> <br> 
+<h3> 1. What are the programming methods or approaches of program development? </h3>
+<br>
+<p>There are two approaches of program development. They are Procedure Oriented Programming and Object-Oriented Programming. Procedure Oriented Programming is a conventional method of programming and the Object-Oriented Programming is a modern or latest programming method. </p>
+
+<h3> 2. What is Procedure Oriented Programming? </h3>
+<br>
+<p>It is a conventional or old method of programming, in which the program is written into many small parts and combined together. In this approach, the functions are created and the data is not very crucial. Variables are created for the data handling and they are treated as the global and local variables. Creation of the variables inside of the sub programs is known as local variable and the creation of the variables in the main module is called the global variable. Global variables can be accessed from any modules but the local variables can be accessed only within the local modules. The alteration of data is very high. </p>
+
+<h3> 3. What are the features of Procedure Oriented Programming? </h3>
+<br>
+<p> The characteristics or features are as follow:
+<br>
+a) A large program is broken down into small programs or procedures.
+<br>
+b) It focuses on the functions rather than the data.
+<br>
+c) Variables are created as local and global.
+<br>
+d) The possibility of data alteration is very high, which is the main disadvantage of this approach.
+<br>
+e) It follows top down method. </p>
+
+<h3> 4. What is Object Oriented Programming? </h3>
+<br>
+<p> It is a modern approach of programming. It is highly known as OOP in short form. In this method, all the real world entities are treated as the objects and objects are collected in a class. Even the classes are controlled by the Super class. And by the inheritance feature, the changes on the super class are easily passed to its sub classes. Similarly, it was developed to overcome procedure oriented programming method and the data is given high priority rather than the functions. Data can be hidden, so that the possibility of data alteration is very less. </p>
+ <br>
+<h3> 5. What are the characteristics of OOP? </h3>
+<br>
+<p> The characteristics of OOP are:
+<br>
+a) Emphasis is given to the data.
+<br>
+b) Program are divided into multiple objects.
+<br>
+c) Functions and data are tied together in a single unit.
+<br>
+d) Data can be hidden to prevent accidental alteration.
+<br>
+e) It follows the bottom up approach. </p>
+<br>
+<h3> Write the differences between procedure oriented and object oriented programming ?</h3>
+<table>
+        <caption>Procedure Oriented vs Object Oriented Programming</caption>
+        <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Procedure Oriented Programming (POP)</th>
+                <th>Object Oriented Programming (OOP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Emphasis is given to procedures (functions).</td>
+                <td>Emphasis is given to data (objects).</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Program is divided into modules or functions.</td>
+                <td>Program is divided into objects and classes.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Follows top-down programming approach.</td>
+                <td>Follows bottom-up programming approach.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Data is generally not hidden.</td>
+                <td>Data can be hidden using encapsulation.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Does not model the real world perfectly.</td>
+                <td>Models the real world more closely and accurately.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Maintenance is difficult in large programs.</td>
+                <td>Maintenance is easier due to modular structure.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Code reusability is limited.</td>
+                <td>Code reusability is high using inheritance and classes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Examples: C, Pascal, FORTRAN, COBOL.</td>
+                <td>Examples: C++, Java, Python, Smalltalk.</td>
+            </tr>
+        </tbody>
+    </table> <br>
+
+<h3> 7. Write short notes on the following: </h3>
+<h4>a) Object </h4> 
+<p>
+All the entities of a program used in OOP method are called objects. Here entities represent a group of people, teachers, students, books, cars, etc. Each entity or object does have an attribute called characteristics and the behavior or functions. For example, a car can be an object. The colour like blue, black, size, weight, etc. are the attributes or the characteristics, which distinguishes to it with other objects and move, turn, etc. can be the functions.
+</p>
+<h4> b) Class </h4> 
+<p>
+Class is a user defined data type in OOP, which defines the data types for all the objects, which run under it. Or it collects the objects of its similar data types. For example, a class vehicle can have the objects like car, bus, truck, etc. Similarly a class school can have students, teachers, staff, etc.
+</p>
+ <h4> c) Abstraction </h4>
+<p>
+It is a feature of hiding internal detail of any object. It provides only the interface to the user, which makes them easy to use but does not show the details of that object, how that works and how that is made. Due to this feature, OOP has become very secure platform for its data from being accidental alteration.
+</p>
+<h4> d) Encapsulation </h4>
+<p>
+It is a process of combining the data and functions together. OOP gives more emphasis on the data rather than the functions or procedures. Many functions can use the same data but the instruction given to the function to use any particular data and combining them together is the encapsulation. Due to its unrelated functions cannot use unnecessary data in the program.
+</p>
+<h4> e) Inheritance (Imp.) </h4>
+<p>
+Inheritance is the process of creating new classes based on the existing class. The new classes require the features of the main class called the Super class and it is provided through the feature called Inheritance. By the Inheritance feature Super class can coordinate with it’s sub classes. It models the real world. It allows the extension and reuse of existing code without having to rewrite for the new created classes.
+</p>
+<h4> f) Polymorphism </h4>
+<p>
+It is a feature of OOP, which refers to the way of operating the same operator in different ways and different method or purpose. Operator overloading and the operation overloading are the examples or Polymorphism. For example ‘+’ operator can be used for arithmetic operation and string concatenation both. This facility or feature is an example of Polymorphism. It reduces the number or keywords or operators. 
+</p>
+<h4> 8. What are the advantages and disadvantages of OOP? (most imp) </h4>
+<p>
+Advantages:
+<br>
+a) Code repetition is reduced by the various techniques like inheritance.
+<br>
+b) Data is more secure due to the data hiding feature called abstraction.
+<br>
+c) Existing classes can serve as library class for further enhancements.
+<br>
+d) Division of a program into multiple objects makes the software development easier.
+<br>
+e) Software complexity is less.
+<br>
+f) Upgrading and maintenance of software is easy.
+<br>
+g) It perfectly models the real world system.
+<br>
+h) Code re-usability is much easier than the conventional programming system.
+<br>
+Disadvantages
+<br>
+a) Compiler and runtime overhead is high.
+<br>
+b) Software developer should analyze the problem in object oriented way.
+<br>
+c) Requires the mastery in software engineering and programming methodology.
+<br>
+d) Useful only for the large and complex projects.
+<br>
+</p>
+</div>
+
+</body>
+</html>
